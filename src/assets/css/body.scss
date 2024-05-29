@@ -1,0 +1,25 @@
+* {
+  background-color: green;
+  margin: auto;
+  align-items: center;
+}
+
+// body {
+//   section {
+//     skills
+//   }
+// }
+
+header {
+  width: 100%;
+  background-color: red;
+  div {
+    display: flex;
+    justify-content: space-between;
+    a {
+      padding-inline: 10px;
+      font-style: none;
+      color: #000;
+    }
+  }
+}
