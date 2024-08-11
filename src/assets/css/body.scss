@@ -1,25 +1,29 @@
 * {
-  background-color: green;
-  margin: auto;
-  align-items: center;
+  --color-base: #021322;
+  --color-900: #074473;
+  --color-700: #005faa;
+  --color-300: #76ccff;
+  --color-200: #b6e2ff;
+  --color-100: #def0ff;
+  --color-50: #eff8ff;
 }
 
-// body {
-//   section {
-//     skills
-//   }
-// }
-
-header {
+body {
+  background-color: var(--color-base);
+  display: flex;
   width: 100%;
-  background-color: red;
-  div {
-    display: flex;
+  position:inherit;
+
+  section {
+    
+    padding-inline: 5rem;
     justify-content: space-between;
-    a {
-      padding-inline: 10px;
-      font-style: none;
-      color: #000;
-    }
   }
+
+#content{
+  flex-basis: 20%;
+  right: 0;
+
+}
+
 }

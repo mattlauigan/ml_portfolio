@@ -1,17 +1,12 @@
-import { Header } from './components/header'
-import { Body } from './components/body'
+
+import { Body } from "./components/body";
+import { Hero } from "./components/hero";
 
 export function App() {
-  
-
   return (
     <>
-<Header />
-<Body />
-
-<footer>
-goodbye
-</footer>
+      {/* <Header /> */}
+      <Body />
     </>
-  )
+  );
 }
