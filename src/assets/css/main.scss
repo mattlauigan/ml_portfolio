@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Arial';
+  color: var(--color-prime-50);
+}
+
+body {
+  width: max(100%, fit-content);
+}
+
+#app {
+  display: flex;
+  justify-content: space-between;
+  .Container {
+
+    background: var(--color-prime-950);
+    width: 100wv;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    content: center;
+
+
+  }
+
+  #content{
+    width: 500px;
+  }
+
+}
