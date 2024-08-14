@@ -6,11 +6,8 @@ import { Hero } from "./hero";
 export function Body() {
   return (
     <>
-        <GradientDiv className="Container">
-          <Hero />
-          <Content />
-        </GradientDiv>
-      
+      <Hero />
+      <Content />
     </>
   );
 }

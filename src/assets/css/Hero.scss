@@ -1,9 +1,17 @@
 #hero {
-  position:fixed
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+
+
+  
 
   .HeroNav {
     display: block;
-    
+
+
+
 
     span:before {
       content: "";
@@ -12,7 +20,7 @@
       width: 2rem;
       position: relative;
       top: 1rem;
-      position:inherit;
+      position: inherit;
       background: var(--color-50);
 
     }
@@ -23,6 +31,17 @@
       background-color: var(--color-500);
       margin-left: 4rem;
       text-align: left;
+    }
+  }
+
+  .links{
+    display: flex;
+    justify-content: space-around;
+
+    img{
+      width: 2rem;
+      height: 2rem;
+      // background-color: red;
     }
   }
 }
