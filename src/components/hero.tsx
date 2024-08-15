@@ -8,7 +8,7 @@ export function Hero() {
   const tagline =
     "I craft dynamic, efficient, and innovative software solutions that bring your ideas to life!";
   return (
-    <div id="hero">
+    <section id="hero">
       <div>
         <h1>{ownerName}</h1>
         <h3>{position}</h3>
@@ -36,6 +36,6 @@ export function Hero() {
           <img src="" alt="" />
         </a>
       </div>
-    </div>
+    </section>
   );
 }

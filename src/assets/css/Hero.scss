@@ -1,15 +1,30 @@
 #hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 100vh;
+  width: 40vw;
 
+  :first-child {
+    h1 {
+      font-size: 4rem;
+    }
 
-  
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      width: 30vw;
+    }
+  }
 
   .HeroNav {
-    display: block;
-
+    // // display: block;
+    // display:flex;
+    // flex-direction: column;
+    // align-items: top;
+    margin-bottom: 5rem;
 
 
 
@@ -31,17 +46,19 @@
       background-color: var(--color-500);
       margin-left: 4rem;
       text-align: left;
+      border: none;
+      font-size: 1.2rem;
+      padding-block: .4rem;
     }
   }
 
-  .links{
+  .links {
     display: flex;
     justify-content: space-around;
 
-    img{
+    img {
       width: 2rem;
       height: 2rem;
-      // background-color: red;
     }
   }
 }

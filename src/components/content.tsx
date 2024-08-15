@@ -3,15 +3,15 @@ export function Content() {
     <section id="content">
       <div className="about">
         <p>
-          In 2013, I embarked on my journey in Information Technology, enrolling
+          In <strong>2013</strong>, I embarked on my journey in Information Technology, enrolling
           in a BSIT program where I developed my foundational skills.
-          Upon graduating, I started my career as a <strong>Technical Support Engineer</strong> on March 2017.
+          Upon graduating, I started my career as a <strong>Technical Support Engineer</strong> on <strong>March 2017</strong>.
           This role allowed me to gain valuable experience troubleshooting and
           resolving complex software and hardware issues.
         </p>
         <p>
           Driven by a desire to deepen my technical expertise, I made a lateral
-          move into <strong>Software development</strong> on April 2021. I’ve had the privilege of building
+          move into <strong>Software development</strong> on <strong>April 2021</strong>. I’ve had the privilege of building
           software solutions for bank clients, focusing on creating secure,
           bug-free, and accessible web portals. My primary goal is to design and
           develop web applications that are not only robust and secure but also
