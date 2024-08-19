@@ -54,7 +54,8 @@
 
   .links {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap:2rem;
 
     img {
       width: 2rem;

@@ -1,6 +1,6 @@
 import "../assets/css/Hero.scss";
-import Behance from "../assets/behance.svg";
 import HeroNav from "./hero-nav";
+import Links from "./links";
 
 export function Hero() {
   const ownerName = "Raymart Lauigan";
@@ -19,23 +19,7 @@ export function Hero() {
         <HeroNav id="experience" state={false} label="EXPERIENCES" />
         <HeroNav id="projects" state={false} label="PROJECTS" />
       </div>
-      <div className="links">
-        <a href="">
-          <img src="" alt="Github" />
-        </a>
-        <a href="">
-          <img src="" alt="linkedin" />
-        </a>
-        <a href="">
-          <img src={Behance} alt="React Logo" />
-        </a>
-        <a href="">
-          <img src="" alt="" />
-        </a>
-        <a href="">
-          <img src="" alt="" />
-        </a>
-      </div>
+     <Links/>
     </section>
   );
 }
