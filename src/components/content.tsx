@@ -1,12 +1,10 @@
 import "../assets/css/content.scss";
 import Resume from "../assets/resume.pdf";
 import ExperienceCard from "./experience-card";
-import { Hero } from "./hero";
 
 export function Content() {
   return (
     <>
-      <Hero />
       <section id="content">
         <div className="about">
           <p>

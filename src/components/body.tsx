@@ -5,7 +5,7 @@ import { Hero } from "./hero";
 export function Body() {
   return (
     <>
-      
+      <Hero />
       <Content />
     </>
   );
