@@ -28,6 +28,7 @@ const GradientDiv: React.FC<GradientDivProps> = ({ children, className }) => {
         backgroundImage: `radial-gradient(circle at ${
           GradientPosition().x
         }px ${GradientPosition().y}px, #074473, transparent 80%)`,
+        position: `fixed`
       }}
     >
       {children}

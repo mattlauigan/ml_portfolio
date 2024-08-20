@@ -1,6 +1,25 @@
 import "../assets/css/Hero.scss";
 import HeroNav from "./hero-nav";
 import Links from "./links";
+import { NavType } from "../../ts/types/data";
+
+const NavItems: NavType[] = [
+  {
+    id: "about",
+    label: "ABOUT",
+    state: true,
+  },
+  {
+    id: "experiences",
+    label: "EXPERIENCES",
+    state: false,
+  },
+  {
+    id: "projects",
+    label: "PROJECTS",
+    state: false,
+  },
+];
 
 export function Hero() {
   const ownerName = "Raymart Lauigan";
@@ -15,11 +34,11 @@ export function Hero() {
         <p>{tagline}</p>
       </div>
       <div className="HeroNav">
-        <HeroNav id="about" state={true} label="ABOUT" />
-        <HeroNav id="experience" state={false} label="EXPERIENCES" />
-        <HeroNav id="projects" state={false} label="PROJECTS" />
+        {NavItems.map((item) => (
+          <HeroNav id={item.id} state={item.state} label={item.label} />
+        ))}
       </div>
-     <Links/>
+      <Links />
     </section>
   );
 }

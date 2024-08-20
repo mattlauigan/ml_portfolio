@@ -12,7 +12,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--color-prime-50);
+  color: var(--color-prime-100);
+  
   
   
 
@@ -22,3 +23,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+   text-decoration: none;
+}

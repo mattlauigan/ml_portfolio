@@ -1,13 +1,21 @@
 #hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 100vh;
-  width: 40vw;
+  justify-content: start;
+  // height: 100vh;
+  // width: fit-content;
+  // position: fixed ;
+  // top:0;
+  // left: 5rem;
+
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  width: fit-content;
 
   :first-child {
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
     }
 
     h3 {
@@ -16,17 +24,12 @@
 
     p {
       width: 30vw;
+      color:var(--color-prime-100)
     }
   }
 
   .HeroNav {
-    // // display: block;
-    // display:flex;
-    // flex-direction: column;
-    // align-items: top;
-    margin-bottom: 5rem;
-
-
+    margin-block: 5rem;
 
     span:before {
       content: "";
@@ -55,7 +58,7 @@
   .links {
     display: flex;
     justify-content: flex-start;
-    gap:2rem;
+    gap: 2rem;
 
     img {
       width: 2rem;

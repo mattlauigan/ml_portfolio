@@ -1,16 +1,10 @@
-type SectionData = {
-  id: string;
-  state: boolean;
-  label: string;
-};
+import { NavType } from "../../ts/types/data";
 
-const HeroNav = ({ id, label }: SectionData) => {
+const HeroNav = ({ id, label }: NavType) => {
   return (
-    <>
-      <span>
-        <button id={id}>{label}</button>
-      </span>
-    </>
+    <span>
+      <button id={id}>{label}</button>
+    </span>
   );
 };
 

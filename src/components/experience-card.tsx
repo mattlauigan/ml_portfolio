@@ -1,17 +1,5 @@
+import { ExperienceType } from "../../ts/types/data";
 import "../assets/css/experience-card.scss";
-
-type PeriodType = {
-  from: string;
-  to: string;
-};
-
-type ExperienceType = {
-  title: string;
-  subtitle?: string;
-  description: string;
-  Period: PeriodType;
-  skills?: string[];
-};
 
 const ExperienceItems: ExperienceType[] = [
   {
