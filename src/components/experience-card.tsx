@@ -21,6 +21,7 @@ const ExperienceItems: ExperienceType[] = [
       "CodeIgniter",
       "PHP",
       "Redis",
+      "MySQL",
     ],
   },
   {
@@ -31,6 +32,18 @@ const ExperienceItems: ExperienceType[] = [
       from: "2027",
       to: "2022",
     },
+    skills: [
+      "MySQL",
+      "Shell Scripting",
+      "CentOS",
+      "safenet PKI Solution",
+      "ISO Standards",
+      "Windows",
+      "Apache",
+      "Red Hat Linux",
+      "MS Office",
+      "Amazon Web Services (AWS)",
+    ],
   },
 ];
 

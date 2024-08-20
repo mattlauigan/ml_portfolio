@@ -3,15 +3,13 @@
 
   a {
     text-decoration: none;
-
     display: flex;
     padding: 2rem;
     justify-content: flex-start;
     gap: 2rem;
+    animation-duration: 4s;
 
     &:hover {
-      // background: rgba(255, 255, 255, 0.05);
-      // backdrop-filter: saturate(360%) blur(10%);
       border-radius: 1rem;
       background: linear-gradient(0deg,
           rgba(255, 255, 255, 0.1) 77%);
@@ -24,7 +22,7 @@
     }
 
     .experience-card-title:hover {
-      color: red;
+      color: var(--color-prime-300);
     }
 
     :nth-child(2) {
