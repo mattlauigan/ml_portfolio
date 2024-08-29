@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import '../../index.scss';
+
 * {
   // border: 1px solid red;
   margin: 0;
@@ -9,10 +11,62 @@
   color: var(--color-prime-50);
 }
 
+$prime-950: #021322;
+$prime-900: #074473;
+$prime-700: #005faa;
+$prime-700-tp: #0060aa3f;
+$prime-300: #76ccff;
+$prime-300-tp: #76cdff62;
+$prime-200: #b6e2ff;
+$prime-200-tp: #b6e2ff9c;
+$prime-100: #def0ff;
+$prime-50: #eff8ff;
+$prime-50-tp: #eff8ffcc;
+
+$secondary-500: #03fbff;
+$secondary-500-tp: #52ccce1e;
+
+:root {
+
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+
+  // font-size:14px;
+  color-scheme: light dark;
+  color: $prime-200-tp;
+
+
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   width: max(100%, fit-content);
   display: flex;
   justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-hover {
+  &:hover {
+    border-radius: 1rem;
+    background: linear-gradient(0deg,
+        rgba(255, 255, 255, 0.1) 77%);
+    background-blend-mode: exclusion;
+    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(5px) saturate(90%);
+    -webkit-backdrop-filter: blur(5px);
+
+  }
 }
 
 #app {
@@ -28,20 +82,193 @@ body {
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
-    gap: 6rem;
-    padding: 5rem 8rem;
+    padding: 5rem 12rem;
     overflow-y: scroll;
-  }
 
-  .card-hover {
-    &:hover {
-      border-radius: 1rem;
-      background: linear-gradient(0deg,
-          rgba(255, 255, 255, 0.1) 77%);
-      background-blend-mode: exclusion;
-      box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
-      backdrop-filter: blur(5px) saturate(90%);
-      -webkit-backdrop-filter: blur(5px);
+    #hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      position: sticky;
+      top: 0;
+      width: 35vw;
+      // flex-basis: 30%;
+
+      :first-child {
+
+        h1,
+        h3 {
+          color: $prime-50-tp;
+        }
+
+        h1 {
+
+          width: 40vw;
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.7rem;
+          margin-block: -.70rem 1.5rem;
+          font-weight: 300;
+        }
+
+        p {
+          width: 25vw;
+          color: var(--color-prime-100)
+        }
+      }
+
+      .HeroNav {
+        margin-block: 5rem;
+        color: $prime-50-tp;
+
+        span:before {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 2rem;
+          position: relative;
+          top: 1rem;
+          position: inherit;
+          background: $prime-50;
+          transition: width 2s;
+        }
+
+        span::hover {
+          width: 2rem;
+        }
+
+        button {
+          display: block;
+          width: 16rem;
+          background-color: var(--color-500);
+          margin-left: 4rem;
+          text-align: left;
+          border: none;
+          font-size: 1.2rem;
+          padding-block: .4rem;
+        }
+      }
+
+      .links {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+
+    #content {
+      padding-inline: 2rem;
+
+
+      .about {
+
+        p {
+          margin-block: 1rem;
+
+          strong {
+            color: $prime-50-tp;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .experience-container {
+        margin-left: -2rem;
+        margin-bottom: 3rem;
+        a {
+
+          text-decoration: none;
+          display: flex;
+          padding: 1.5rem 0;
+          justify-content: flex-start;
+          gap: 2rem;
+
+
+          h3 {
+            color: $prime-50;
+          }
+
+          .experience-period {
+            text-wrap: nowrap;
+            position: inherit;
+            text-indent: 2rem;
+          }
+
+          :nth-child(2) { //Experience
+            width: fit-content;
+            padding-right: 2rem;
+            padding-left: -2rem;
+
+
+            .experience-card-title::after {
+              content: '↗';
+              padding-left: .5rem;
+              font-size: .8rem;
+            }
+
+            .experience-card-title:hover {
+              color: $secondary-500;
+
+              &::after {
+                position: absolute;
+              }
+            }
+          }
+
+          :nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+          }
+
+          .skills {
+            margin-top:1rem;
+            // margin-inline: .5rem;
+            color: $secondary-500;
+            display: flex;
+            gap: .5rem;
+            flex-wrap: wrap;
+
+            p {
+
+              background-color: $secondary-500-tp;
+              padding: 2px 1.5rem;
+              border-radius: 2rem;
+            }
+          }
+        }
+      }
+
+      #resume {
+        position:static;
+        margin-block: 5rem;
+        color: $prime-100;
+        font-size: 1.2rem;
+
+        &::after {
+          content: '↗';
+          padding-left: .5rem;
+          font-size: .8rem;
+        }
+
+
+        &:hover {
+          color:$secondary-500;
+
+          &::after {
+            padding:.8rem;
+            margin-top:-2rem;
+          }
+        }
+      }
 
     }
   }

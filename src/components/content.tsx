@@ -1,4 +1,3 @@
-import "../assets/css/content.scss";
 import Resume from "../assets/resume.pdf";
 import ExperienceCard from "./experience-card";
 
@@ -42,9 +41,11 @@ export function Content() {
         </div>
         
           <ExperienceCard />
+
           <a href={Resume} target="_blank" rel="noreferrer" id="resume">
             View full Résumé <i class="fa-solid fa-arrow-right" title="Next Page"></i>
           </a>
+          <div>asdas</div>
         
       </section>
     </>

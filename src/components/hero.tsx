@@ -1,4 +1,3 @@
-import "../assets/css/Hero.scss";
 import HeroNav from "./hero-nav";
 import Links from "./links";
 import { NavType } from "../../ts/types/data";

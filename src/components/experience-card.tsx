@@ -1,11 +1,11 @@
 import { ExperienceType } from "../../ts/types/data";
-import "../assets/css/experience-card.scss";
+
 
 const ExperienceItems: ExperienceType[] = [
   {
     title: "Software Developer",
     description:
-      "            As a software developer, I turn designs into functional code using HTML, CSS, JavaScript, and PHP. I work with MySQL for data needs, build front-end apps with React.js, and create APIs with PHP and Laravel. I fix bugs, improve system performance, and add new features. I also lead QA testing, gather user feedback, provide training, and manage version control with GitHub to keep the team coordinated.",
+      "As a software developer, I turn designs into functional code using HTML, CSS, JavaScript, and PHP. I work with MySQL for data needs, build front-end apps with React.js, and create APIs with PHP and Laravel. I fix bugs, improve system performance, and add new features. I also lead QA testing, gather user feedback, provide training, and manage version control with GitHub to keep the team coordinated.",
     Period: {
       from: "2022",
       to: "Present",
