@@ -42,7 +42,7 @@ const ProjectsCardItems: ProjectType[] = [
 
 const ProjectsCard = () => {
   return (
-    <div className="project-container">
+    <div id="project-container">
       {ProjectsCardItems.map((project) => (
         <a href="####" className="project-card card-hover">
           <div>

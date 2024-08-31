@@ -124,23 +124,6 @@ a {
         margin-block: 5rem;
         color: $prime-50-tp;
 
-
-        span:before {
-          content: "";
-          display: block;
-          height: 2px;
-          width: 2rem;
-          position: relative;
-          top: 1rem;
-          position: inherit;
-          background: $prime-50;
-          transition: width 2s;
-        }
-
-        span::hover {
-          width: 2rem;
-        }
-
         button {
           font-size: 1rem;
           display: block;
@@ -149,7 +132,6 @@ a {
           margin-left: 4rem;
           text-align: left;
           border: none;
-
           padding-block: .4rem;
         }
       }
@@ -170,7 +152,7 @@ a {
       padding-inline: 2rem;
 
 
-      .about {
+      #about {
 
         p {
           font-size: .9rem;
@@ -183,7 +165,7 @@ a {
         }
       }
 
-      .experience-container {
+      #experience-container {
         margin: 5rem -5rem 3rem -3rem;
 
         .xp-card {
@@ -279,7 +261,7 @@ a {
         }
       }
 
-      .project-container {
+      #project-container {
         margin: 5rem -5rem 0 -3rem;
 
         .project-card {
@@ -299,9 +281,6 @@ a {
               background-color: red;
             }
           }
-
-
-
 
           :last-child {
 

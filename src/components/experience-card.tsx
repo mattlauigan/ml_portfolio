@@ -49,7 +49,7 @@ const ExperienceItems: ExperienceType[] = [
 
 const ExperienceCard = () => {
   return (
-    <div className="experience-container">
+    <div id="experience-container">
       {ExperienceItems.map((Experience) => (
         <a href="####" className='xp-card card-hover' >
           <div>

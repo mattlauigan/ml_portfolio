@@ -20,6 +20,7 @@ export type NavType = {
   id: string;
   label: string;
   state: boolean;
+  section: string
 };
 
 export type PeriodType = {

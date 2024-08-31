@@ -6,7 +6,7 @@ export function Content() {
   return (
     <>
       <section id="content">
-        <div className="about">
+        <div id="about">
           <p>
             In <strong>2013</strong>, I embarked on my journey in Information
             Technology, enrolling in a BSIT program where I developed my

@@ -1,9 +1,21 @@
 import { NavType } from "../../ts/types/data";
 
-const HeroNav = ({ id, label }: NavType) => {
+interface HeroNavProps {
+  id: string;
+  label: string;
+  section: string;
+  handleSelect: (section: string) => void;
+}
+
+const HeroNav: React.FC<HeroNavProps> = ({ id, label, section, handleSelect }) => {
+  const handleClick = () => {
+    handleSelect(section);
+  };
   return (
     <span>
-      <button id={id}>{label}</button>
+      <button id={id} onClick={handleClick}>
+        {label}
+      </button>
     </span>
   );
 };
