@@ -1,9 +1,19 @@
+
+
 export type ExperienceType = {
   title: string;
   subtitle?: string;
   description: string;
   Period: PeriodType;
   skills?: string[];
+};
+
+export type ProjectType = {
+  title: string;
+  description: string;
+  image: string;
+  remarks?: string;
+  stack?: string[];
 };
 
 export type NavType = {
@@ -16,4 +26,3 @@ export type PeriodType = {
   from: string;
   to: string;
 };
-

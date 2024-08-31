@@ -114,6 +114,7 @@ a {
         }
 
         p {
+          font-size: .9rem;
           width: 25vw;
           color: var(--color-prime-100)
         }
@@ -122,6 +123,7 @@ a {
       .HeroNav {
         margin-block: 5rem;
         color: $prime-50-tp;
+
 
         span:before {
           content: "";
@@ -140,13 +142,14 @@ a {
         }
 
         button {
+          font-size: 1rem;
           display: block;
           width: 16rem;
           background-color: var(--color-500);
           margin-left: 4rem;
           text-align: left;
           border: none;
-          font-size: 1.2rem;
+
           padding-block: .4rem;
         }
       }
@@ -170,6 +173,7 @@ a {
       .about {
 
         p {
+          font-size: .9rem;
           margin-block: 1rem;
 
           strong {
@@ -180,9 +184,115 @@ a {
       }
 
       .experience-container {
-        margin-left: -2rem;
-        margin-bottom: 3rem;
-        a {
+        margin: 5rem -5rem 3rem -3rem;
+
+        .xp-card {
+
+          text-decoration: none;
+          display: flex;
+          padding: 1.5rem 0;
+          justify-content: flex-start;
+          gap: 2rem;
+
+          :first-child .experience-period {
+            text-wrap: nowrap;
+            position: inherit;
+            text-indent: 3rem;
+            font-size: .9rem;
+          }
+
+          :last-child {
+            //Experience
+            font-size: 1.1rem;
+            width: fit-content;
+            padding-right: 2rem;
+            padding-left: -2rem;
+
+            .experience-card-title {
+              font-weight: 500;
+              color: $prime-50;
+              font-size: 1.1rem;
+
+              &::after {
+                content: '↗';
+                padding-left: .5rem;
+                font-size: .9rem;
+              }
+
+              &:hover {
+                color: $secondary-500;
+
+                &::after {
+                  position: absolute;
+                  padding-left: .8rem;
+                }
+              }
+            }
+
+            .experience-card-description {
+              display: flex;
+              flex-direction: column;
+              margin-top: .8rem;
+              font-size: .9rem;
+
+            }
+
+            .skills {
+              margin-top: 1rem;
+              // margin-inline: .5rem;
+              color: $secondary-500;
+              display: flex;
+              gap: .5rem;
+              flex-wrap: wrap;
+
+              p {
+                font-size: .8rem;
+                background-color: $secondary-500-tp;
+                padding: 2px 1.5rem;
+                border-radius: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      #resume {
+        position: static;
+        margin-block: 5rem;
+        color: $prime-100;
+        font-size: 1.1rem;
+
+        &::after {
+          content: '↗';
+          padding-left: .2rem;
+          font-size: .8rem;
+        }
+
+        &:hover {
+          color: $secondary-500;
+
+          &::after {
+            position: absolute;
+            padding-left: 0.8rem;
+            padding-bottom: 1rem;
+          }
+        }
+      }
+
+      .project-container {
+        margin: 5rem -5rem 0 -3rem;
+
+        .project-card {
+          :first-child {
+            margin-left: 1rem;
+
+            img {
+              width: 10rem;
+              height: 5rem;
+              border: 1px solid red;
+              background-color: red;
+            }
+          }
 
           text-decoration: none;
           display: flex;
@@ -191,46 +301,47 @@ a {
           gap: 2rem;
 
 
-          h3 {
-            color: $prime-50;
-          }
+          :last-child {
 
-          .experience-period {
-            text-wrap: nowrap;
-            position: inherit;
-            text-indent: 2rem;
-          }
-
-          :nth-child(2) { //Experience
+            //Experience
             width: fit-content;
             padding-right: 2rem;
             padding-left: -2rem;
 
-
-            .experience-card-title::after {
-              content: '↗';
-              padding-left: .5rem;
-              font-size: .8rem;
-            }
-
-            .experience-card-title:hover {
-              color: $secondary-500;
+            .project-card-title {
+              color: $prime-50;
+              font-size: 1.1rem;
+              font-weight: 500;
+              text-indent: -1rem;
 
               &::after {
-                position: absolute;
+                content: '↗';
+                padding-left: .3rem;
+                font-size: .8rem;
+              }
+
+              &:hover {
+                color: $secondary-500;
+
+                &::after {
+                  position: absolute;
+                  padding-left: 1.5rem;
+                }
               }
             }
           }
 
-          :nth-child(2) {
+          .project-card-description {
             display: flex;
             flex-direction: column;
             gap: .5rem;
+            margin-top: .8rem;
+            font-size: .9rem;
 
           }
 
-          .skills {
-            margin-top:1rem;
+          .stack {
+            margin-top: 1rem;
             // margin-inline: .5rem;
             color: $secondary-500;
             display: flex;
@@ -238,7 +349,7 @@ a {
             flex-wrap: wrap;
 
             p {
-
+              font-size: .8rem;
               background-color: $secondary-500-tp;
               padding: 2px 1.5rem;
               border-radius: 2rem;
@@ -246,30 +357,6 @@ a {
           }
         }
       }
-
-      #resume {
-        position:static;
-        margin-block: 5rem;
-        color: $prime-100;
-        font-size: 1.2rem;
-
-        &::after {
-          content: '↗';
-          padding-left: .5rem;
-          font-size: .8rem;
-        }
-
-
-        &:hover {
-          color:$secondary-500;
-
-          &::after {
-            padding:.8rem;
-            margin-top:-2rem;
-          }
-        }
-      }
-
     }
   }
 
