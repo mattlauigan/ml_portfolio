@@ -1,6 +1,7 @@
 import HeroNav from "./hero-nav";
 import Links from "./links";
 import { NavType } from "../../ts/types/data";
+import { useEffect, useState } from "react";
 
 const NavItems: NavType[] = [
   {
@@ -24,32 +25,45 @@ const NavItems: NavType[] = [
 ];
 
 export function Hero() {
+  const [selectedRadio, setSelectedRadio] = useState<string>("about");
   const ownerName = "Raymart Lauigan";
   const position = "Software Developer";
   const tagline =
     "I craft dynamic, efficient, and innovative software solutions that bring your ideas to life!";
 
+  useEffect(() => {
+    const radio = document.getElementById(selectedRadio) as HTMLInputElement;
+    radio.checked = true;
+  }, [selectedRadio]);
+
   const onSelect = (section: string) => {
     const element = document.getElementById(section);
-    const top = document.getElementById("top-div");
-    console.log(section);
-    if (section === "about-container") {
-      if (top) top.scrollIntoView({ behavior: "smooth" });
-    } else {
-      if (element) {
-        // window.scrollTo({
-        //   top: 0,
-        //   behavior: 'smooth'
-        // });
 
-        element.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      switch (section) {
+        case "experience-container":
+          setSelectedRadio("experience-container");
+          break;
+        case "project-container":
+          setSelectedRadio("project-container");
+          break;
+        default:
+          setSelectedRadio("about");
       }
     }
   };
   return (
     <section id="hero">
       <div>
-        <h1>{ownerName}</h1>
+        <a
+          href="###"
+          method="POST"
+          onClick={() => onSelect("top-div")}
+          className="pointer"
+        >
+          <h1>{ownerName}</h1>
+        </a>
         <h3>{position}</h3>
         <p>{tagline}</p>
       </div>

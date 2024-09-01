@@ -69,6 +69,10 @@ a {
   display: none;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 #app {
   display: flex;
   justify-content: center;
@@ -553,7 +557,9 @@ a {
         }
 
         .footer-container {
-          width: 100%;
+          width: 100%
+          
+          ;
         }
       }
     }
