@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import '../../index.scss';
+
+* {
+  // border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Arial';
+  color: var(--color-prime-50);
+}
+
+$prime-950: #021322;
+$prime-900: #074473;
+$prime-700: #005faa;
+$prime-700-tp: #0060aa3f;
+$prime-300: #76ccff;
+$prime-300-tp: #76cdff62;
+$prime-200: #b6e2ff;
+$prime-200-tp: #b6e2ff9c;
+$prime-100: #def0ff;
+$prime-50: #eff8ff;
+$prime-50-tp: #eff8ffcc;
+
+$secondary-500: #03fbff;
+$secondary-500-tp: #52ccce1e;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  // font-size:14px;
+  color-scheme: light dark;
+  color: $prime-200-tp;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: max(100%, fit-content);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-hover {
+  &:hover {
+    border-radius: 1rem;
+    background: linear-gradient(0deg,
+        rgba(255, 255, 255, 0.1) 77%);
+    background-blend-mode: exclusion;
+    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(5px) saturate(90%);
+    -webkit-backdrop-filter: blur(5px);
+  }
+}
+
+.section-header {
+  color: $prime-100;
+  font-size: .9rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  #top-div {
+    position: absolute;
+    top: 0;
+  }
+
+  .Container {
+
+    background-color: var(--color-prime-950);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5rem 12rem;
+    overflow-y: scroll;
+
+    #hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      position: sticky;
+      top: 0;
+      width: 35vw;
+      // flex-basis: 30%;
+
+      :first-child {
+
+        h1,
+        h3 {
+          color: $prime-50-tp;
+        }
+
+        h1 {
+
+          width: 40vw;
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.7rem;
+          margin-block: -.70rem 1.5rem;
+          font-weight: 300;
+        }
+
+        p {
+          font-size: .9rem;
+          width: 25vw;
+          color: var(--color-prime-100)
+        }
+      }
+
+      .HeroNav {
+        margin-block: 5rem;
+        color: $prime-50-tp;
+        display: flex;
+        flex-direction: column;
+        color: $prime-200-tp;
+
+        span {
+          margin-block: .5rem;
+
+          .nav-select {
+            font-size: 1rem;
+            display: block;
+            width: 16rem;
+            background-color: var(--color-500);
+            margin-left: 4rem;
+            text-align: left;
+            border: none;
+            padding-block: .4rem;
+            display: none;
+
+            &:checked+label {
+              font-size: 1rem;
+              font-weight: 500;
+              color: $prime-100;
+              
+
+              &::before {
+                width: 4.2rem;
+                border-top: 3px solid $prime-100;
+                ;
+              }
+
+            }
+          }
+
+          label {
+            cursor: pointer;
+            font-size: .9rem;
+            padding:1rem;
+
+            &::before {
+              content: "";
+              display: inline-flex;
+              margin-right: 20px;
+              padding-top: 5px;
+              border-top: 2px solid  $prime-200-tp;;
+              width: 30px;
+              transition: .45s ease-out 100ms;
+
+            }
+
+            &:hover {
+              font-size: 1.1rem;
+              font-weight: 500;
+              color: $prime-100;
+
+              &::before {
+                width: 4rem;
+                border-top: 3px solid $prime-100;
+              }
+            }
+          }
+        }
+      }
+
+      .links {
+        display: inline;
+        justify-content: flex-start;
+
+        img {
+
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-inline: .7rem;
+        }
+      }
+    }
+
+
+    #content {
+      padding-inline: 2rem;
+
+      #about-container {
+
+        p {
+          font-size: .9rem;
+          margin-block: 1rem;
+
+          strong {
+            color: $prime-50-tp;
+            font-weight: 500;
+          }
+
+          &a {
+            cursor: url("../images/running.png");
+          }
+        }
+      }
+
+      #experience-container {
+        margin: 5rem -5rem 3rem -3rem;
+
+        .xp-card {
+
+          text-decoration: none;
+          display: flex;
+          padding: 1.5rem 0;
+          justify-content: flex-start;
+          gap: 2rem;
+
+          :first-child .experience-period {
+            text-wrap: nowrap;
+            position: inherit;
+            text-indent: 3rem;
+            width: 10rem;
+            font-size: .9rem;
+            padding-top: .1rem;
+          }
+
+          :last-child {
+            //Experience
+            font-size: 1.1rem;
+            width: fit-content;
+            padding-right: 2rem;
+            padding-left: -2rem;
+
+            .experience-card-title {
+              font-weight: 500;
+              color: $prime-50;
+              font-size: 1.1rem;
+
+              &::after {
+                content: '↗';
+                padding-left: .5rem;
+                font-size: .9rem;
+              }
+
+              &:hover {
+                color: $secondary-500;
+
+                &::after {
+                  position: absolute;
+                  padding-left: .8rem;
+                }
+              }
+            }
+
+            .experience-card-description {
+              display: flex;
+              flex-direction: column;
+              margin-top: .8rem;
+              font-size: .9rem;
+
+            }
+
+            .skills {
+              margin-top: 1rem;
+              // margin-inline: .5rem;
+              color: $secondary-500;
+              display: flex;
+              gap: .5rem;
+              flex-wrap: wrap;
+
+              p {
+                font-size: .8rem;
+                background-color: $secondary-500-tp;
+                padding: 2px 1.5rem;
+                border-radius: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      #resume {
+        position: static;
+        margin-block: 5rem;
+        color: $prime-100;
+        font-weight: 500;
+        font-size: .9rem;
+
+        &::after {
+          content: '↗';
+          padding-left: .2rem;
+          font-size: .8rem;
+        }
+
+        &:hover {
+          color: $secondary-500;
+
+          &::after {
+            position: absolute;
+            padding-left: 0.8rem;
+            padding-bottom: 1rem;
+          }
+        }
+      }
+
+      #project-container {
+        margin: 5rem -5rem 0 -3rem;
+
+        .project-card {
+          text-decoration: none;
+          display: flex;
+          padding: 1.5rem 0;
+          justify-content: flex-start;
+          gap: 2rem;
+
+          :first-child {
+            margin-left: 1rem;
+
+            img {
+              object-fit: fill;
+              object-position: 50% 50%;
+              width: 10rem;
+              height: 5rem;
+            }
+          }
+
+          :last-child {
+
+            //Experience
+            width: fit-content;
+            padding-right: 2rem;
+            padding-left: -2rem;
+
+            .project-card-title {
+              color: $prime-50;
+              font-size: 1.1rem;
+              font-weight: 500;
+              text-indent: -1rem;
+
+              &::after {
+                content: '↗';
+                padding-left: .3rem;
+                font-size: .8rem;
+              }
+
+              &:hover {
+                color: $secondary-500;
+
+                &::after {
+                  position: absolute;
+                  padding-left: 1.5rem;
+                }
+              }
+            }
+          }
+
+          .project-card-description {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            margin-top: .8rem;
+            font-size: .9rem;
+
+          }
+
+          .stack {
+            margin-top: 1rem;
+            // margin-inline: .5rem;
+            color: $secondary-500;
+            display: flex;
+            gap: .5rem;
+            flex-wrap: wrap;
+
+            p {
+              font-size: .8rem;
+              background-color: $secondary-500-tp;
+              padding: 2px 1.5rem;
+              border-radius: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-container {
+      margin-block: 5rem;
+
+      p {
+        font-size: .9rem;
+        padding-bottom: 5rem;
+
+        span {
+          font-weight: 500;
+          color: $prime-50-tp;
+        }
+      }
+    }
+  }
+
+
+
+}
+
+@media screen and (max-width: 1023px) {
+  .section-header {
+    display: block;
+  }
+
+  #app {
+    display: block;
+
+    .Container {
+      display: block;
+      padding: 2rem 5rem;
+
+      #hero {
+        display: block;
+        position: relative;
+
+        .HeroNav {
+          display: none;
+
+        }
+
+        .links {
+          img {
+            margin-block: 2rem;
+          }
+        }
+      }
+
+      #content {
+        display: block;
+        padding-inline: 0;
+
+        #experience-container {
+          margin: 5rem 0;
+          padding: 0;
+
+          .xp-card {
+            :first-child {
+              .experience-period {
+                text-indent: 0;
+              }
+            }
+          }
+        }
+
+        .footer-container {
+          width: 30rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-header {
+    display: block;
+  }
+
+  #app {
+    display: block;
+
+    .Container {
+      display: block;
+      padding: 2rem;
+
+      #hero {
+        display: block;
+        position: relative;
+        width: 100vw;
+
+        :first-child {
+          h1 {
+            width: 100vw;
+          }
+
+          p {
+            width: 70vw;
+          }
+        }
+
+        .HeroNav {
+          display: none;
+
+        }
+
+        .links {
+          img {
+            margin-block: 2rem;
+          }
+        }
+      }
+
+      #content {
+        display: block;
+        padding-inline: 0;
+
+        #experience-container {
+          margin: 5rem 0;
+          padding: 0;
+
+
+          .xp-card {
+            display: block;
+
+            :first-child {
+              .experience-period {
+                text-indent: 0;
+              }
+            }
+
+            :last-child {
+              .experience-card-description {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
+        #project-container {
+          margin: 0;
+
+          .project-card {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 0;
+            // -webkit-transform: rotate(-180deg);
+            // transform: rotate(-180deg);
+
+            :first-child {
+              margin: 0;
+            }
+
+            :last-child {
+
+              .project-card-title {
+                text-indent: 0;
+              }
+            }
+
+          }
+        }
+
+        .footer-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

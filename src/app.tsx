@@ -1,12 +1,14 @@
-
 import { Body } from "./components/body";
-import { Hero } from "./components/hero";
+import GradientDiv from "./components/gradient-div";
 
 export function App() {
   return (
     <>
-      {/* <Header /> */}
-      <Body />
+      <GradientDiv  className="Container">
+        
+        <div id="top-div"></div> {/*  to scroll to the top */}
+        <Body />
+      </GradientDiv>
     </>
   );
 }
