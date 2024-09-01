@@ -1,6 +1,7 @@
 const About = () => {
   return (
     <div id="about-container">
+      <p className="section-header">ABOUT</p>
       <p>
         In <strong>2013</strong>, I embarked on my journey in Information
         Technology, enrolling in a BSIT program where I developed my

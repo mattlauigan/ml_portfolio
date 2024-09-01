@@ -27,19 +27,12 @@ $secondary-500: #03fbff;
 $secondary-500-tp: #52ccce1e;
 
 :root {
-
-
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 300;
-
   // font-size:14px;
   color-scheme: light dark;
   color: $prime-200-tp;
-
-
-
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -65,8 +58,15 @@ a {
     box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(5px) saturate(90%);
     -webkit-backdrop-filter: blur(5px);
-
   }
+}
+
+.section-header {
+  color: $prime-100;
+  font-size: .9rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  display: none;
 }
 
 #app {
@@ -77,8 +77,8 @@ a {
   position: relative;
 
   #top-div {
-   position: absolute; 
-   top:0;
+    position: absolute;
+    top: 0;
   }
 
   .Container {
@@ -134,6 +134,7 @@ a {
 
         span {
           margin-block: .5rem;
+
           .nav-select {
             font-size: 1rem;
             display: block;
@@ -187,9 +188,9 @@ a {
       .links {
         display: inline;
         justify-content: flex-start;
-        
 
         img {
+
           width: 1.5rem;
           height: 1.5rem;
           margin-inline: .7rem;
@@ -233,6 +234,7 @@ a {
             text-wrap: nowrap;
             position: inherit;
             text-indent: 3rem;
+            width: 10rem;
             font-size: .9rem;
             padding-top: .1rem;
           }
@@ -296,7 +298,8 @@ a {
         position: static;
         margin-block: 5rem;
         color: $prime-100;
-        font-size: 1.1rem;
+        font-weight: 500;
+        font-size: .9rem;
 
         &::after {
           content: '↗';
@@ -327,17 +330,12 @@ a {
 
           :first-child {
             margin-left: 1rem;
-            
 
             img {
-              object-fit:fill;
+              object-fit: fill;
               object-position: 50% 50%;
               width: 10rem;
               height: 5rem;
-              // box-shadow: 1px 1px 1px 1px $prime-300-tp;
-              // border: 1px solid $prime-200-tp;
-              // background-color: $secondary-500-tp;
-              
             }
           }
 
@@ -401,9 +399,11 @@ a {
 
     .footer-container {
       margin-block: 5rem;
+
       p {
         font-size: .9rem;
         padding-bottom: 5rem;
+
         span {
           font-weight: 500;
           color: $prime-50-tp;
@@ -412,4 +412,150 @@ a {
     }
   }
 
+
+
+}
+
+@media screen and (max-width: 1023px) {
+  .section-header{
+    display:block;
+  }
+  #app {
+    display: block;
+
+    .Container {
+      display: block;
+      padding: 2rem 5rem;
+
+      #hero {
+        display: block;
+        position: relative;
+
+        .HeroNav {
+          display: none;
+
+        }
+
+        .links {
+          img {
+            margin-block: 2rem;
+          }
+        }
+      }
+
+      #content {
+        display: block;
+        padding-inline: 0;
+
+        #experience-container {
+          margin: 5rem 0;
+          padding: 0;
+
+          .xp-card {
+            :first-child {
+              .experience-period {
+                text-indent: 0;
+              }
+            }
+          }
+        }
+
+        .footer-container {
+          width: 30rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-header{
+    display:block;
+  }
+  #app {
+    display: block;
+
+    .Container {
+      display: block;
+      padding:2rem;
+
+      #hero {
+        display: block;
+        position: relative;
+        width: 100vw;
+        :first-child {
+          h1 {
+            width: 100vw;
+          }
+          p {
+            width: 70vw;
+          }
+        }
+
+        .HeroNav {
+          display: none;
+
+        }
+
+        .links {
+          img {
+            margin-block: 2rem;
+          }
+        }
+      }
+
+      #content {
+        display: block;
+        padding-inline: 0;
+
+        #experience-container {
+          margin: 5rem 0;
+          padding: 0;
+          
+
+          .xp-card {
+            display: block;
+            :first-child {
+              .experience-period {
+                text-indent: 0;
+              }
+            }
+            :last-child {
+              .experience-card-description {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
+        #project-container {
+          margin:0;
+          .project-card {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column-reverse;
+            padding:  0;
+            // -webkit-transform: rotate(-180deg);
+            // transform: rotate(-180deg);
+
+            :first-child {
+              margin:0;
+            }
+            :last-child{
+              
+                .project-card-title 
+                {
+                  text-indent: 0;
+                }
+              }
+            
+          }
+        }
+
+        .footer-container {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

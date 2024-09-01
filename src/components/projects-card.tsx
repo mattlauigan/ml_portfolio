@@ -45,7 +45,9 @@ const ProjectsCardItems: ProjectType[] = [
 
 const ProjectsCard = () => {
   return (
+    
     <div id="project-container">
+      <p className="section-header">PROJECTS</p>
       {ProjectsCardItems.map((project) => (
         <a href="####" className="project-card card-hover">
           <div>
