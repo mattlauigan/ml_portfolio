@@ -7,7 +7,7 @@ const NavItems: NavType[] = [
     id: "about",
     label: "ABOUT",
     state: true,
-    section: "about",
+    section: "top-div",
   },
   {
     id: "experiences",
@@ -31,8 +31,19 @@ export function Hero() {
 
   const onSelect = (section: string) => {
     const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    const top = document.getElementById("top-div");
+    console.log(section);
+    if (section === "about-container") {
+      if (top) top.scrollIntoView({ behavior: "smooth" });
+    } else {
+      if (element) {
+        // window.scrollTo({
+        //   top: 0,
+        //   behavior: 'smooth'
+        // });
+
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
   return (
