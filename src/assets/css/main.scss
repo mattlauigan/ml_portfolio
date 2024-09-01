@@ -135,6 +135,7 @@ a {
         color: $prime-50-tp;
         display: flex;
         flex-direction: column;
+        color: $prime-200-tp;
 
         span {
           margin-block: .5rem;
@@ -151,13 +152,15 @@ a {
             display: none;
 
             &:checked+label {
-
-              font-size: 1.1rem;
+              font-size: 1rem;
               font-weight: 500;
+              color: $prime-100;
+              
 
               &::before {
-                width: 4rem;
-                border-top: 3px solid white;
+                width: 4.2rem;
+                border-top: 3px solid $prime-100;
+                ;
               }
 
             }
@@ -165,24 +168,28 @@ a {
 
           label {
             cursor: pointer;
+            font-size: .9rem;
+            padding:1rem;
 
             &::before {
               content: "";
               display: inline-flex;
               margin-right: 20px;
               padding-top: 5px;
-              border-top: 2px solid white;
+              border-top: 2px solid  $prime-200-tp;;
               width: 30px;
-              transition: .30s;
+              transition: .45s ease-out 100ms;
+
             }
 
             &:hover {
               font-size: 1.1rem;
               font-weight: 500;
+              color: $prime-100;
 
               &::before {
                 width: 4rem;
-                border-top: 3px solid white;
+                border-top: 3px solid $prime-100;
               }
             }
           }
@@ -421,9 +428,10 @@ a {
 }
 
 @media screen and (max-width: 1023px) {
-  .section-header{
-    display:block;
+  .section-header {
+    display: block;
   }
+
   #app {
     display: block;
 
@@ -473,24 +481,27 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-  .section-header{
-    display:block;
+  .section-header {
+    display: block;
   }
+
   #app {
     display: block;
 
     .Container {
       display: block;
-      padding:2rem;
+      padding: 2rem;
 
       #hero {
         display: block;
         position: relative;
         width: 100vw;
+
         :first-child {
           h1 {
             width: 100vw;
           }
+
           p {
             width: 70vw;
           }
@@ -515,15 +526,17 @@ a {
         #experience-container {
           margin: 5rem 0;
           padding: 0;
-          
+
 
           .xp-card {
             display: block;
+
             :first-child {
               .experience-period {
                 text-indent: 0;
               }
             }
+
             :last-child {
               .experience-card-description {
                 margin-top: 0;
@@ -533,33 +546,32 @@ a {
         }
 
         #project-container {
-          margin:0;
+          margin: 0;
+
           .project-card {
             margin-top: 3rem;
             display: flex;
             flex-direction: column-reverse;
-            padding:  0;
+            padding: 0;
             // -webkit-transform: rotate(-180deg);
             // transform: rotate(-180deg);
 
             :first-child {
-              margin:0;
+              margin: 0;
             }
-            :last-child{
-              
-                .project-card-title 
-                {
-                  text-indent: 0;
-                }
+
+            :last-child {
+
+              .project-card-title {
+                text-indent: 0;
               }
-            
+            }
+
           }
         }
 
         .footer-container {
-          width: 100%
-          
-          ;
+          width: 100%;
         }
       }
     }

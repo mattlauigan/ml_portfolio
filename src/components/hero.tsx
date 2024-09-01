@@ -2,6 +2,7 @@ import HeroNav from "./hero-nav";
 import Links from "./links";
 import { NavType } from "../../ts/types/data";
 import { useEffect, useState } from "react";
+import useScroll from "../store/scroll";
 
 const NavItems: NavType[] = [
   {
@@ -24,48 +25,75 @@ const NavItems: NavType[] = [
   },
 ];
 
+type RadioMappingType = {
+  [key: string]: string;
+};
+
+const radioMapping: RadioMappingType = {
+  "experience-container": "experience-container",
+  "project-container": "project-container",
+  about: "top-div",
+};
+
+type HeroDataType = {
+  ownername: string;
+  jobtitle: string;
+  tagline: string;
+};
+
+const HeroData: HeroDataType = {
+  ownername: "Raymart Lauigan",
+  jobtitle: "Software Developer",
+  tagline:
+    "I craft dynamic, efficient, and innovative software solutions that bring your ideas to life!",
+};
+
 export function Hero() {
   const [selectedRadio, setSelectedRadio] = useState<string>("about");
-  const ownerName = "Raymart Lauigan";
-  const position = "Software Developer";
-  const tagline =
-    "I craft dynamic, efficient, and innovative software solutions that bring your ideas to life!";
+  const yPosition: number = useScroll((state) => state.scrollTop);
+
+  // useEffect(() => {
+
+  // }, [yPosition, selectedRadio]);
 
   useEffect(() => {
+    let selected = "";
+    if (yPosition === 0) {
+      selected = "about";
+    } else if (Math.round(yPosition) > 1400) {
+      selected = "projects";
+    } else if (Math.round(yPosition) > 599) {
+      selected = "experiences";
+    } else {
+      selected = "about";
+    }
+    setSelectedRadio(selected);
+
     const radio = document.getElementById(selectedRadio) as HTMLInputElement;
+
     radio.checked = true;
-  }, [selectedRadio]);
+  }, [selectedRadio, yPosition]);
 
   const onSelect = (section: string) => {
-    const element = document.getElementById(section);
+    setSelectedRadio(radioMapping[section]);
+    const element = document.getElementById(section) as HTMLElement;
 
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      switch (section) {
-        case "experience-container":
-          setSelectedRadio("experience-container");
-          break;
-        case "project-container":
-          setSelectedRadio("project-container");
-          break;
-        default:
-          setSelectedRadio("about");
-      }
-    }
+    element.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <section id="hero">
       <div>
         <a
           href="###"
           method="POST"
-          onClick={() => onSelect("top-div")}
+          onClick={() => onSelect(radioMapping.about)}
           className="pointer"
         >
-          <h1>{ownerName}</h1>
+          <h1>{HeroData.ownername}</h1>
         </a>
-        <h3>{position}</h3>
-        <p>{tagline}</p>
+        <h3>{HeroData.jobtitle}</h3>
+        <p>{HeroData.tagline}</p>
       </div>
       <div className="HeroNav">
         {NavItems.map((item) => (

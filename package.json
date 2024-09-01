@@ -11,7 +11,8 @@
   "dependencies": {
     "dot-env": "^0.0.1",
     "preact": "^10.19.6",
-    "sass": "^1.77.2"
+    "sass": "^1.77.2",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.2",
