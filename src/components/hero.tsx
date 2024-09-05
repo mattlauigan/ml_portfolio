@@ -51,22 +51,39 @@ const HeroData: HeroDataType = {
 export function Hero() {
   const [selectedRadio, setSelectedRadio] = useState<string>("about");
   const yPosition: number = useScroll((state) => state.scrollTop);
+  const currentSection = useScroll((state) => state.currentSection);
 
   // useEffect(() => {
 
   // }, [yPosition, selectedRadio]);
 
   useEffect(() => {
+    console.log(currentSection);
     let selected = "";
-    if (yPosition === 0) {
-      selected = "about";
-    } else if (Math.round(yPosition) > 1400) {
-      selected = "projects";
-    } else if (Math.round(yPosition) > 599) {
-      selected = "experiences";
-    } else {
-      selected = "about";
+
+    switch (currentSection) {
+      case "top-div":
+        selected = "about";
+        break;
+      case "project-container":
+        selected = "projects";
+        break;
+      case "experience-container":
+        selected = "experiences";
+        break;
+      default:
+        selected = "about";
     }
+
+    // if (yPosition === 0) {
+    //   selected = "about";
+    // } else if (Math.round(yPosition) > 1400) {
+    //   selected = "projects";
+    // } else if (Math.round(yPosition) > 599) {
+    //   selected = "experiences";
+    // } else {
+    //   selected = "about";
+    // }
     setSelectedRadio(selected);
 
     const radio = document.getElementById(selectedRadio) as HTMLInputElement;

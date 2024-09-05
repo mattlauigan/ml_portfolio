@@ -29,7 +29,7 @@ const ExperienceItems: ExperienceType[] = [
     description:
       "As a Technical Support Engineer, my role involved setting up and configuring applications and databases on Linux-based servers, maintaining database servers, and providing 24/7 third-level client support. I deployed servers to production, pushed patches and updates, and collaborated with other teams to resolve issues. Additionally, I debugged ATM and POS transaction errors and created documentation and guidelines for future reference.",
     Period: {
-      from: "2027",
+      from: "2017",
       to: "2022",
     },
     skills: [
