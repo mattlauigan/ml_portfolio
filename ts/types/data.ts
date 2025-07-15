@@ -12,6 +12,7 @@ export type ProjectType = {
   title: string;
   description: string;
   image: string;
+  link: undefined | string
   remarks?: string;
   stack?: string[];
 };
