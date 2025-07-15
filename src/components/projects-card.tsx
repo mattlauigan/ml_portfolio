@@ -72,7 +72,7 @@ const ProjectsCard = () => {
         <a
           href={project.link}
           className={`project-card card-hover ${
-            project.link === undefined ? "cursor-default" : "poiniter"
+            project.link === undefined ? "cursor-default" : "pointer"
           } `}
         >
           <div>
